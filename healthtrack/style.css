@@ -1,0 +1,84 @@
+/* --- EXISTING STYLES (Keep these) --- */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f9; margin: 0; color: #333; }
+nav { background: #2c3e50; padding: 1rem 2rem; color: white; display: flex; justify-content: space-between; align-items: center; }
+nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+nav .logo { font-size: 1.2rem; font-weight: bold; }
+.container { max-width: 1000px; margin: 2rem auto; padding: 0 20px; }
+
+/* Form Elements */
+input, select, textarea { width: 100%; padding: 12px; margin: 5px 0 15px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px; }
+button { background: #27ae60; color: white; border: none; padding: 12px 24px; cursor: pointer; border-radius: 4px; font-size: 1rem; transition: background 0.3s; }
+button:hover { background: #219150; }
+.card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+.error { color: #e74c3c; background: #fadbd8; padding: 10px; border-radius: 4px; margin-bottom: 10px; }
+
+/* Table Styles */
+table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; border-radius: 8px; overflow: hidden; }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+th { background-color: #34495e; color: white; }
+tr:hover { background-color: #f8f9fa; }
+
+/* Chart Box */
+.chart-box { width: 100%; height: 300px; }
+
+/* --- NEW LANDING PAGE STYLES --- */
+.landing-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Info takes more space than login */
+    gap: 40px;
+    align-items: center; /* Center vertically */
+}
+
+.landing-info h1 { color: #2c3e50; font-size: 2.5rem; margin-bottom: 10px; }
+.landing-info .tagline { font-size: 1.2rem; color: #7f8c8d; margin-bottom: 30px; }
+
+.info-section { margin-bottom: 30px; }
+.info-section h3 { color: #27ae60; border-bottom: 2px solid #27ae60; display: inline-block; padding-bottom: 5px; margin-bottom: 15px; }
+.info-section p { line-height: 1.6; }
+.info-section ul { list-style: none; padding: 0; }
+.info-section ul li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+.info-section ul li::before { content: "✔"; color: #27ae60; position: absolute; left: 0; font-weight: bold; }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .landing-grid { grid-template-columns: 1fr; } /* Stack them on mobile */
+    .landing-info { order: 2; } /* Put info below login on mobile */
+    .login-box { order: 1; }
+}
+/* --- NEW LOGO STYLES --- */
+.app-logo {
+    max-width: 180px; /* Adjusts the logo size on the Landing Page */
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.app-logo-small {
+    max-width: 100px; /* Smaller logo for the Register/Login cards */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Centers the image */
+}
+
+/* --- UPDATED FOOTER STYLES --- */
+footer {
+    text-align: center;      /* Centers the text horizontally */
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #eee; /* Adds a faint line above footer */
+    color: #7f8c8d;          /* Grey text color */
+    font-size: 0.9rem;
+}
+
+/* Logo Sizing */
+.app-logo {
+    max-width: 300px; /* Limits the big logo */
+    height: auto;     /* Keeps the aspect ratio */
+}
+
+.app-logo-small {
+    max-width: 100px; /* Limits the small logo */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+}
